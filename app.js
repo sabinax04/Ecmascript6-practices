@@ -1,7 +1,13 @@
-// Shorthand Property
+// Arrow Function
 
- const name = "Ali";
- const age = 20;
+//console.log(add(3,5));
 
- let object = {name, age};
- console.log(object);
+//function add(number1, number2){
+//    return number1 + number2;
+//}
+
+
+
+let add = (number1,number2)=> number1 + number2;
+
+console.log(add(3,5)); 
