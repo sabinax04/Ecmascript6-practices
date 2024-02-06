@@ -1,3 +1,7 @@
-const name = "Sabina";
-const template = `Hello, my name is ${name}`;
-console.log(template);
+// Shorthand Property
+
+ const name = "Ali";
+ const age = 20;
+
+ let object = {name, age};
+ console.log(object);
