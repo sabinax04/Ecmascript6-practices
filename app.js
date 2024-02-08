@@ -1,7 +1,9 @@
-// Parameter Defaults
+// Rest/Spread Operator
 
-function add( number1, number2=0 ){
-    return number1 + number2; // 5 + undefined = NaN
-}
+let user = { name : "Sabina", age : 20, city : "Baku" };
 
-console.log(add(5));
+//console.log(user);
+
+user = { ...user, city : "Norway" };
+
+console.log(user);
