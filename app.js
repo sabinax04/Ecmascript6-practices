@@ -1,25 +1,16 @@
-// Rest/Spread Operator
+// Ternary Operators
 
-//let user = { name : "Sabina", age : 20, city : "Baku" };
+//const koprununDurumu = "acik";
 
-//console.log(user);
+//koprununDurumu === "acik"
+//? console.log("Kopru aciqdir")
+//: console.log("Kopru baglidir");
 
-//user = { ...user, city : "Norway" };
+const koprununDurumu = "tadilat var";
 
-//console.log(user);
-
-//function add(number1, number2, number3){
-//    return number1 + number2 + number3;
-//}
-
-const numbers = [5,10,15];
-const numbers2 = [20,25,30];
-
-let attachArray = [...numbers, ...numbers2]
-
-console.log(attachArray);
-
-let attachArray2 = numbers.concat(numbers2);
-
-console.log(attachArray2);
+koprununDurumu === "acik"
+? console.log("Kopru acik")
+: koprununDurumu === "kapali"
+? console.log("Kopru kapali")
+: console.log("Koprunun durumu bilinmiyor");
 
