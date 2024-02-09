@@ -1,16 +1,16 @@
-// Ternary Operators
+// .find() .some() .every() methods
 
-//const koprununDurumu = "acik";
+const urunler = [
 
-//koprununDurumu === "acik"
-//? console.log("Kopru aciqdir")
-//: console.log("Kopru baglidir");
+    { id : 1, name: "Kalem", fiyat: 5 },
+    { id : 2, name: "Defter", fiyat: 10 },
+    { id : 3, name: "Silgi", fiyat: 2 },
+    { id : 4, name: "Kalemtraş", fiyat: 7 },
+    
+];
 
-const koprununDurumu = "tadilat var";
+console.log("Find : ", urunler.find((urun)=> urun.fiyat > 5));
 
-koprununDurumu === "acik"
-? console.log("Kopru acik")
-: koprununDurumu === "kapali"
-? console.log("Kopru kapali")
-: console.log("Koprunun durumu bilinmiyor");
+console.log("Some : ", urunler.some((urun)=> urun.fiyat < 2));
 
+console.log("Every : ", urunler.every((urun)=> urun.fiyat > 1));
