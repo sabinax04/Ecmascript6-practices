@@ -1,19 +1,4 @@
-// .includes() , .toLowerCase()
-
-const name = "Alina";
-
-const name2 = "Ravin";
-
-console.log(name.includes("Ali")); // true
-console.log(name.includes("alina")); // false
-
-const newName = name.toLowerCase();
-console.log(newName);
-
-console.log(name.toLowerCase().includes("na"));
-
-console.log(name.toLowerCase().includes(name2.toLowerCase()));
-
+// .map()
 
 const urunler = [
 
@@ -24,4 +9,8 @@ const urunler = [
     
 ];
 
-console.log(urunler.filter((urun)=>urun.name.toLowerCase().includes("kalem")));
+//console.log(urunler.map(urun => `${urun.name} fiyati ${urun.fiyat} liradir.`));
+
+const newUrun = (urun => `${urun.name} fiyati ${urun.fiyat} liradir.`);
+
+console.log(urunler.map(newUrun));
