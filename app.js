@@ -1,4 +1,4 @@
-// .filter()
+// .reduce()
 
 const urunler = [
 
@@ -8,13 +8,19 @@ const urunler = [
     { id : 4, name: "Kalemtraş", fiyat: 7 },
     
 ];
+ const toplamUrunFiyati = urunler.reduce((accumulator, currentValue) => accumulator = accumulator +currentValue.fiyat, 0);
+
+ console.log( { toplamUrunFiyati } );
+
+ const toplamString = urunler.reduce((accumulator, currentValue) => ( accumulator = `${accumulator} ${currentValue.name}`) , "Urun isimleri :");
 
 
-console.log(urunler.filter(urun => urun.fiyat > 5));
+ console.log(toplamString);
 
+ const toplamArray = urunler.reduce((accumulator, currentValue) => accumulator = [...accumulator, currentValue.name], []);
 
-console.log(
-    urunler.filter(
-        urun => urun.name.toLowerCase().includes("kalem".toLowerCase())
-    )
-);
+ console.log( {toplamArray} );
+
+ const mapMethod = urunler.map((urun) => urun.name );
+
+ console.log(mapMethod);
