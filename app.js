@@ -1,4 +1,4 @@
-// .map()
+// .filter()
 
 const urunler = [
 
@@ -9,8 +9,12 @@ const urunler = [
     
 ];
 
-//console.log(urunler.map(urun => `${urun.name} fiyati ${urun.fiyat} liradir.`));
 
-const newUrun = (urun => `${urun.name} fiyati ${urun.fiyat} liradir.`);
+console.log(urunler.filter(urun => urun.fiyat > 5));
 
-console.log(urunler.map(newUrun));
+
+console.log(
+    urunler.filter(
+        urun => urun.name.toLowerCase().includes("kalem".toLowerCase())
+    )
+);
