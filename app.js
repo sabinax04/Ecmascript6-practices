@@ -1,26 +1,37 @@
-// .reduce()
+// Promises and async/await
 
-const urunler = [
+/*
+const veriGetir = new Promise((resolve, reject) => {
+    const veri = true;
 
-    { id : 1, name: "Kalem", fiyat: 5 },
-    { id : 2, name: "Defter", fiyat: 10 },
-    { id : 3, name: "Silgi", fiyat: 2 },
-    { id : 4, name: "Kalemtraş", fiyat: 7 },
-    
-];
- const toplamUrunFiyati = urunler.reduce((accumulator, currentValue) => accumulator = accumulator +currentValue.fiyat, 0);
+    if(veri){
+        resolve("Bu ifade true");
+    }else{
+        reject("Bu ifade false");
+    }
 
- console.log( { toplamUrunFiyati } );
+});
 
- const toplamString = urunler.reduce((accumulator, currentValue) => ( accumulator = `${accumulator} ${currentValue.name}`) , "Urun isimleri :");
+veriGetir
+.then((cevab) => console.log("Gelen cevap : ", cevab))
+.catch((hata) => console.log("Gelen hata : ", hata));
 
+*/
 
- console.log(toplamString);
+const axios = require('axios');
 
- const toplamArray = urunler.reduce((accumulator, currentValue) => accumulator = [...accumulator, currentValue.name], []);
+//console.log(axios);
 
- console.log( {toplamArray} );
+// https://restcountries.eu/rest/v2/all
 
- const mapMethod = urunler.map((urun) => urun.name );
+async function ulkeGetir(){
+    // axios
+    // .get("https://restcountries.eu/rest/v2/all")
+    // .then((response) => console.log(response.data[0]))
+    // .catch();
 
- console.log(mapMethod);
+    const ulkeListesi = await axios.get("https://restcountries.eu/rest/v2/all");
+    console.log(ulkeListesi);
+}
+
+ulkeGetir();
